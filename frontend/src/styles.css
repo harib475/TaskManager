@@ -1,0 +1,16 @@
+:root{ --bg:#f3f4f6; --card:#fff; --muted:#6b7280 }
+body{ margin:0; font-family:Inter,system-ui,Arial; background:var(--bg); color:#111 }
+.container{ max-width:900px; margin:20px auto; padding:16px }
+.topbar{ display:flex; justify-content:space-between; align-items:center }
+.auth-card{ max-width:420px; margin:40px auto; background:var(--card); padding:16px; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.06) }
+.task-form{ display:flex; gap:8px; flex-wrap:wrap; margin:12px 0 }
+.task-form input, .task-form textarea, .task-form select{ padding:8px; border-radius:6px; border:1px solid #e5e7eb }
+.task{ background:var(--card); padding:12px; margin-bottom:8px; border-radius:8px; display:flex; justify-content:space-between; align-items:center }
+.task.done{ opacity:0.7; text-decoration:line-through }
+.conn{ padding:6px 10px; border-radius:6px }
+.conn.online{ background:#d1fae5; color:#065f46 }
+.conn.offline{ background:#fee2e2; color:#991b1b }
+.loader{ padding:20px; text-align:center }
+.error{ color:#b91c1c; margin-top:8px }
+button{ cursor:pointer }
+@media (max-width:600px){ .container{ padding:10px } .task-form{ flex-direction:column } }
