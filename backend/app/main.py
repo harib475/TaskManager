@@ -22,7 +22,7 @@ origins = [
 # This allows frontend (React, etc.) to talk with backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # ⚠️ In production, restrict to your frontend domain
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
