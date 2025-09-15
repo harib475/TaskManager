@@ -14,16 +14,13 @@ app = FastAPI(
     version="1.0.0",
 )
 # Allow CORS for frontend during development
-origins = [
-    "https://task-manager-neon-phi.vercel.app/login",
-]
 
 # ✅ Middleware: CORS (Cross-Origin Resource Sharing)
 # This allows frontend (React, etc.) to talk with backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
+    allow_origins=["*"],   # ⚠️ In production, restrict to your frontend domain
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
