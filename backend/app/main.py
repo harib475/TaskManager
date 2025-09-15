@@ -13,7 +13,10 @@ app = FastAPI(
     description="Backend for Task Management App built with FastAPI",
     version="1.0.0",
 )
-
+# Allow CORS for frontend during development
+origins = [
+    "https://task-manager-neon-phi.vercel.app/login",
+]
 
 # ✅ Middleware: CORS (Cross-Origin Resource Sharing)
 # This allows frontend (React, etc.) to talk with backend
